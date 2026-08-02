@@ -1,15 +1,17 @@
-import './App.css'
-import HomePage from "./pages/Home.jsx" 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProjectPage from "./components/projects.jsx";
+import ProjectDetail from "./components/ProjectDetail.jsx";
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <div>
-        You import the pages here.
-        <Homepage />
-      </div>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProjectPage />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
