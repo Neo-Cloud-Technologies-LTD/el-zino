@@ -1,15 +1,12 @@
-import './App.css'
-import HomePage from "./pages/Home.jsx" 
+import Contact from "./components/Contact";
 
-function App() {
-  return (
-    <>
-      <div>
-        You import the pages here.
-        <Homepage />
-      </div>
-    </>
-  )
+
+function App(){
+    return(
+        <>
+        <Contact/>
+        </>
+    )
 }
 
-export default App
+export default App;
