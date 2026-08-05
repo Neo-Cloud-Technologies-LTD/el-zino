@@ -17,10 +17,12 @@
     background-color:#2B2769 ;
     margin: 10px auto ;
 }
-.Client2{
-  text-align: center;
-  word-spacing: 15px;
-  font-family: 'Times New Roman', Times, serif;
-  content: "";
+  img{
+  width: 115.5%;
+  height: 230px;
+  object-fit: fill;
+  display: inline-block;
+  margin: 50px auto;
 }
+
 }
