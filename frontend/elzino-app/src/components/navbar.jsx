@@ -1,4 +1,4 @@
-import './navbar.css';
+import './nav.css';
 
 function Navbar() {
     const links = [
@@ -11,11 +11,11 @@ function Navbar() {
       <header>
  <a href="El-Zino/src/App.jsx" className='logo'> <img src="/Elzino logo copy.png" alt="El-Zino Logo"className="logo-box"/></a>
   <nav>
-  <a href="/" className="active">Home</a>
-  <a href="/services">Services</a>
-  <a href="/about">About</a>
-  <a href="/projects">Projects</a>
-  <a href="/contact">Contact</a>
+<li className='list'>  <a href="/" className="active">Home</a></li>
+  <li className='list'><a href="/services" className="active">Services</a></li>
+  <li className='list'><a href="/about" className="active">About</a></li>
+  <li className='list'> <a href="/projects" className="active">Projects</a></li>
+  <li className='list'> <a href="/contact" className="active">Contact</a></li>
 </nav>
 </header>
     </div>
