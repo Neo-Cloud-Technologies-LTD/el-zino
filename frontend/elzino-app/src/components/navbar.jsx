@@ -1,4 +1,4 @@
-import './nav.css';
+import './navbar.css';
 
 function Navbar() {
     const links = [
