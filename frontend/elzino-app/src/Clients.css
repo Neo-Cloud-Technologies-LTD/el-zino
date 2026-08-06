@@ -17,12 +17,17 @@
     background-color:#2B2769 ;
     margin: 10px auto ;
 }
-  img{
-  width: 115.5%;
-  height: 230px;
-  object-fit: fill;
-  display: inline-block;
-  margin: 50px auto;
+  .Client-row img{
+  width: 200px;         
+  height: auto;         
+  object-fit: contain;
+}
+.Client-row{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 }
 
-}
