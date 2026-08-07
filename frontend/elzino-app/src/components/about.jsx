@@ -7,6 +7,7 @@ function AboutSection(){
             <div className="about-content">
                 <div className="about-text">
                     <h1>ABOUT EL-ZINO</h1>
+                    <div className="heading-underline"></div>
                     <p>El Zino Projects is a forward-thinking general contracting company dedicated to delivering high-quality construction solutions across residential, commercial and industrial sectors. With a team of skilled professionals and a commitment to excellence, we bring projects to life with precision, efficiency and innovation.</p>
                 </div>
 
