@@ -1,17 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProjectPage from "./components/projects.jsx";
-import ProjectDetail from "./components/ProjectDetail.jsx";
-import "./App.css";
+import Contact from "./components/Contact";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ProjectPage />} />
-        <Route path="/project/:id" element={<ProjectDetail />} />
-      </Routes>
-    </BrowserRouter>
-  );
+
+function App(){
+    return(
+        <>
+        <Contact/>
+        </>
+    )
 }
 
 export default App;
