@@ -1,15 +1,12 @@
-import './App.css'
-import ServicesSection from './components/services.jsx';
+import Contact from "./components/Contact";
 
-function App() {
-  return (
-    <>
-      <div>
-        <ServicesSection />
-        
-      </div>
-    </>
-  )
+
+function App(){
+    return(
+        <>
+        <Contact/>
+        </>
+    )
 }
 
-export default App
+export default App;

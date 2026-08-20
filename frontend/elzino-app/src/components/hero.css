@@ -1,1 +1,245 @@
-/* Your css code for the hero section goes here. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.background-video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+.navbar {
+  position: relative;
+
+  width: 100%;
+
+  padding: 30px 3.5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 50px;
+  color: #4938a8;
+
+  transform: rotate(90deg);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+  letter-spacing: 1px;
+
+  color: #413594;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 55px;
+}
+
+nav a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  padding: 10px 0;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #6a55d9;
+}
+
+nav a.active {
+  color: #6a55d9;
+}
+
+nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 100%;
+  height: 3px;
+
+  background: #6a55d9;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: Arial, sans-serif;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing: 3px;
+
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+  margin-top: 40px;
+
+  font-size: 70px;
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(10px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .logo-icon {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+  }
+
+  .arrow {
+    font-size: 50px;
+  }
+}
