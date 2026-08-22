@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Services from "./components/services";
@@ -9,15 +10,24 @@ import Contact from "./components/contact";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <ProjectPage />
-      <Clients />
-      <Contact />
-    </>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <Services />
+              <About />
+              <ProjectPage />
+              <Clients />
+              <Contact />
+            </>
+          }
+        />
+
+        <Route path="/project/:id" element={<ProjectDetail />} />
+      </Routes>
   );
 }
 

@@ -8,7 +8,7 @@ import "./projects.css";
 
 const ProjectPage = () => {
   return (
-    <div className="project-page">
+    <section className="project-page" id="project">
       <div className="title">
         <h1>Our Projects</h1>
         <div className="underline"></div>
@@ -43,7 +43,7 @@ const ProjectPage = () => {
           </div>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

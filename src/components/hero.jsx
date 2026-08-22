@@ -4,7 +4,7 @@ import heroVideo from "../assets/hero.mp4"
 function HeroSection() {
   return (
     <>
-        <section className="hero">
+        <section className="hero" id="home">
           <video className="background-video" autoPlay muted loop playsInline>
             <source
               src={heroVideo}

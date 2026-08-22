@@ -25,11 +25,19 @@ body {
   flex: 1;
   max-width: 50%;
   padding: 20px 20px 40px 200px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.about-text.animate {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 2s ease;
 }
 
 .about-text h1 {
   font-size: 55px;
-  font-weight: lighter;
+  font-weight: 400;
   margin-bottom: 15px;
   color: #3c3588;
 }
@@ -79,7 +87,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2b276966;
+  background-color: #2b276970;
   z-index: 1;
 }
 
@@ -89,15 +97,39 @@ body {
   flex: 1;
   padding: 20px;
   border-right: 2px solid rgba(255, 255, 255, 0.959);
+  animation: rotation 40s ease infinite;
 }
 
-.metric:last-child {
+@keyframes rotation {
+  0% ,
+  25% {
+    transform: scale(1);
+  }
+  12.5% {
+    transform: scale(1.14);
+  }
+}
+
+#first {
+  animation-delay: 0s;
+}
+
+#second{
+  animation-delay: 10s;
+}
+
+#third {
+  animation-delay: 20s;
+}
+
+#fourth {
   border-right: none;
+  animation-delay: 30s;
 }
 
 .metric h2 {
   font-size: 60px;
-  font-weight: lighter;
+  font-weight: 400;
   color: #fff;
   margin-top: 8px;
   margin: 5px 0 0;
@@ -110,7 +142,6 @@ body {
 }
 
 @media (max-width: 900px) {
-
   .about-text {
     padding: 32px;
   }

@@ -4,7 +4,7 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <main className="contact-page">
+    <main className="contact-page" id="contact">
       <section className="contact-shell">
         <header className="contact-header">
           <h1>GET IN TOUCH</h1>
