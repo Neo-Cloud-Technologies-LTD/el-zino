@@ -94,7 +94,7 @@ const Contact = () => {
         </section>
 
         <footer className="contact-footer">
-          <p>© 2025 by EL-Zino Construction. All rights reserved.</p>
+          <p>© 2026 by EL-Zino Construction. All rights reserved.</p>
 
           <div className="socials">
             <a href="#" aria-label="Facebook">f</a>
