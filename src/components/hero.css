@@ -1,15 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -19,24 +7,13 @@ body {
   flex-direction: column;
 }
 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.overlay {
+.over {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.20);
+  background: #2b276920;
   z-index: 1;
 }
 
@@ -54,16 +31,16 @@ body {
   animation: move 2s ease;
 }
 
-  @keyframes move {
+@keyframes move {
   from {
-      transform: translateY(50px);
-      opacity: 0;
+    transform: translateY(50px);
+    opacity: 0;
   }
 
-to{
-      transform: translateY(0);
-      opacity: 1;
-}
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero-content h1 {

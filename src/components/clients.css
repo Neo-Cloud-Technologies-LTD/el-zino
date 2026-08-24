@@ -47,3 +47,15 @@
     gap: 50px;
   }
 }
+
+@media (max-width: 650px) {
+   .client-text {
+    font-size: 40px;
+  }
+
+    .client-text:after {
+    width: 100px;
+    height: 5px;
+    margin: 10px auto;
+  }
+}

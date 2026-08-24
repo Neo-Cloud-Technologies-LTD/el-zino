@@ -1,7 +1,7 @@
-import Project1 from "../assets/pexels-jky-2207922-3866807.jpg";
-import Project2 from "../assets/pexels-njeromin-12314551.jpg";
-import Project3 from "../assets/pexels-quentin-ecrepont-1148362-3818947.jpg";
-import Project4 from "../assets/pexels-rescriptt-rescriptt-101153900-18162494.jpg";
+import Project1 from "../assets/pexels-jky-2207922-3866807.webp";
+import Project2 from "../assets/pexels-njeromin-12314551.webp";
+import Project3 from "../assets/pexels-quentin-ecrepont-1148362-3818947.webp";
+import Project4 from "../assets/pexels-rescriptt-rescriptt-101153900-18162494.webp";
 
 import { Link } from "react-router-dom";
 import "./projects.css";

@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./about.css";
-import aboutImage from "../assets/about-image.png";
-import heroVideo from "../assets/hero.mp4";
+import aboutImage from "../assets/about-image.webp";
 
 function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,9 +48,6 @@ function AboutSection() {
       </div>
 
       <div className="about-metrics">
-        <video className="background-video" autoPlay muted loop playsInline>
-          <source src={heroVideo} type="video/mp4" />
-        </video>
         <div className="overlay"></div>
         <div className="metric" id="first">
           <h2>2023</h2>

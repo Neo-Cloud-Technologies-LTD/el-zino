@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import "./services.css";
-import residential from "../assets/residential.png";
-import commercial from "../assets/commercial.png";
-import renovation from "../assets/renovation.png";
+import residential from "../assets/residential.webp";
+import commercial from "../assets/commercial.webp";
+import renovation from "../assets/renovation.webp";
 
 function ServicesSection() {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import slide1 from "../assets/pexels-jky-2207922-3866807.jpg";
-import slide2 from "../assets/pexels-njeromin-12314551.jpg";
-import slide3 from "../assets/pexels-quentin-ecrepont-1148362-3818947.jpg";
-import slide4 from "../assets/pexels-rescriptt-rescriptt-101153900-18162494.jpg";
+import slide1 from "../assets/pexels-jky-2207922-3866807.webp";
+import slide2 from "../assets/pexels-njeromin-12314551.webp";
+import slide3 from "../assets/pexels-quentin-ecrepont-1148362-3818947.webp";
+import slide4 from "../assets/pexels-rescriptt-rescriptt-101153900-18162494.webp";
 import "./projectDetailstyle.css";
 
 const slides = [slide1, slide2, slide3, slide4];

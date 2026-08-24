@@ -1,12 +1,6 @@
 /* Your css code for the about section goes here. */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
 
 .about {
-  background-color: #f8f9fc;
   color: #2b2769;
 }
 
@@ -19,6 +13,7 @@ body {
 
 .about-content {
   display: flex;
+  background-color: #f8f9fc;
 }
 
 .about-text {
@@ -70,24 +65,13 @@ body {
   position: relative;
 }
 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2b276970;
+  background: #2b276950;
   z-index: 1;
 }
 
@@ -101,7 +85,7 @@ body {
 }
 
 @keyframes rotation {
-  0% ,
+  0%,
   25% {
     transform: scale(1);
   }
@@ -114,7 +98,7 @@ body {
   animation-delay: 0s;
 }
 
-#second{
+#second {
   animation-delay: 10s;
 }
 
@@ -137,7 +121,7 @@ body {
 
 .metric p {
   font-size: 22px;
-  color: #aa9cbb;
+  color: #d2ccda;
   margin: 5px 0 0;
 }
 
