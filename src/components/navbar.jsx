@@ -41,6 +41,10 @@ function Navbar() {
     document.body.style.overflow = "auto";
   };
 }, [menuOpen]);
+  
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  }
 
   return (
     <div>
@@ -82,11 +86,21 @@ function Navbar() {
 
       {menuOpen && (
         <div className="mobile-menu">
-          <a href="#home">HOME</a>
-          <a href="#services">SERVICES</a>
-          <a href="#about">ABOUT</a>
-          <a href="#project">PROJECTS</a>
-          <a href="#contact">CONTACT</a>
+          <a href="#home" onClick={handleLinkClick}>
+            HOME
+          </a>
+          <a href="#services" onClick={handleLinkClick}>
+            SERVICES
+          </a>
+          <a href="#about" onClick={handleLinkClick}>
+            ABOUT
+          </a>
+          <a href="#project" onClick={handleLinkClick}>
+            PROJECTS
+          </a>
+          <a href="#contact" onClick={handleLinkClick}>
+            CONTACT
+          </a>
         </div>
       )}
     </div>
