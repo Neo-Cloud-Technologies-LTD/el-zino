@@ -8,66 +8,107 @@ import "./projectDetailstyle.css";
 
 const slides = [slide1, slide2, slide3, slide4];
 
+const getProjectIndex = (id) => {
+  const projectNumber = Number(id);
+  if (!Number.isFinite(projectNumber)) return 0;
+  return Math.max(0, Math.min(slides.length - 1, projectNumber - 1));
+};
+
 const ProjectDetail = () => {
   const { id } = useParams();
-  const [current, setCurrent] = useState(() =>
-    Math.max(0, Math.min(slides.length - 1, Number(id) - 1)),
-  );
+  const [current, setCurrent] = useState(() => getProjectIndex(id));
   const sliderRef = useRef(null);
 
   useEffect(() => {
-    setCurrent(Math.max(0, Math.min(slides.length - 1, Number(id) - 1)));
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [id]);
+
+  useEffect(() => {
+    setCurrent(getProjectIndex(id));
   }, [id]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    const slide = sliderRef.current?.children[current];
-    slide?.scrollIntoView({ behavior: "smooth", inline: "start" });
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.scrollTo({
+      left: slider.clientWidth * current,
+      behavior: "smooth",
+    });
   }, [current]);
 
   return (
-    <div className="project-detail-page">
-      <section className="detail-header-card">
-        <div>
-          <h2>Project {id}</h2>
-        </div>
-        <div className="detail-header-copy">
-          <p>Project details and gallery</p>
+    <main className="project-detail-page">
+      <section className="project-title-header">
+        <div className="project-title-inner">
+          <h1>Project {id}</h1>
+          <span></span>
         </div>
       </section>
 
-      <div className="detail-text">
-        <h3>Project overview</h3>
-        <p>
-          This project page gives a quick overview of the work completed for
-          Project {id}. Each detail page includes a short project summary on the
-          left and a swipeable gallery on the right.
-        </p>
-        <p>
-          The gallery automatically advances every few seconds and remains
-          swipeable on touch devices.
-        </p>
-        <div className="btn">
-          <Link to="/">Back to projects</Link>
-        </div>
-      </div>
+      <section className="project-detail-content">
+        <article className="project-detail-text">
+          <p>
+            This project showcases El-Zino's commitment to quality construction,
+            thoughtful design, and exceptional workmanship. Every stage of the
+            project was carefully planned and executed to create a structure
+            that combines functionality, durability, and modern aesthetics.
+          </p>
 
-      <div className="detail-slider">
-        <div className="slider-window" ref={sliderRef}>
-          {slides.map((src, index) => (
-            <div className="slide" key={index}>
-              <img src={src} alt={`Project ${id} slide ${index + 1}`} />
-            </div>
-          ))}
+          <p>
+            From the initial groundwork to the finishing details, our team
+            focused on maintaining high construction standards while ensuring
+            that the project stayed on schedule and met the required
+            specifications. The result is a well-crafted space designed to serve
+            its purpose while standing the test of time.
+          </p>
+          <Link
+            className="back-projects-btn"
+            to="/"
+            onClick={() => {
+              setTimeout(() => {
+                document.querySelector("#home")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }, 100);
+            }}
+          >
+            Back to Home
+          </Link>
+        </article>
+
+        <div className="project-detail-slider">
+          <div className="slider-window" ref={sliderRef}>
+            {slides.map((src, index) => (
+              <div className="slide" key={index}>
+                <img src={src} alt={`Project ${id} slide ${index + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <footer className="project-footer">
+        <p>© 2026 by EL-Zino Construction. All rights reserved.</p>
+
+        <div className="footer-socials">
+          <a href="/" aria-label="Facebook">
+            f
+          </a>
+          <a href="/" aria-label="LinkedIn">
+            in
+          </a>
+        </div>
+      </footer>
+    </main>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 import menuIcon from "/menu.svg";
 import closeIcon from "/cancel.svg";
@@ -107,4 +108,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar

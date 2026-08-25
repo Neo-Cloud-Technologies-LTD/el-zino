@@ -16,28 +16,28 @@ const ProjectPage = () => {
       
       <div className="project-imgs">
         <Link to="/project/1" className="project-card">
-          <img src={Project1} alt="Project 1" />
+          <img src={Project1} alt="Project 1" loading="eager"/>
           <div className="overlay">
             <h3>Project One</h3>
           </div>
         </Link>
 
         <Link to="/project/2" className="project-card">
-          <img src={Project2} alt="Project 2" />
+          <img src={Project2} alt="Project 2" loading="eager"/>
           <div className="overlay">
             <h3>Project Two</h3>
           </div>
         </Link>
 
         <Link to="/project/3" className="project-card">
-          <img src={Project3} alt="Project 3" />
+          <img src={Project3} alt="Project 3" loading="eager"/>
           <div className="overlay">
             <h3>Project Three</h3>
           </div>
         </Link>
 
         <Link to="/project/4" className="project-card">
-          <img src={Project4} alt="Project 4" />
+          <img src={Project4} alt="Project 4" loading="eager"/>
           <div className="overlay">
             <h3>Project Four</h3>
           </div>

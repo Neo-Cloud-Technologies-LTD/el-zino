@@ -8,6 +8,7 @@ import ProjectDetail from "./components/ProjectDetail";
 import Clients from "./components/clients";
 import Contact from "./components/contact";
 import heroVideo from "./assets/hero.mp4";
+import Nav from "./components/navProject";
 
 function App() {
   return (
@@ -33,7 +34,15 @@ function App() {
         }
       />
 
-      <Route path="/project/:id" element={<ProjectDetail />} />
+      <Route
+        path="/project/:id"
+        element={
+          <>
+            <Nav />
+            <ProjectDetail />
+          </>
+        }
+      />
     </Routes>
   );
 }
