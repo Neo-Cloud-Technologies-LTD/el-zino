@@ -104,7 +104,7 @@ function Nav() {
             <Link
               to="/"
               className={active === "services" ? "active" : ""}
-              onClick={() => scrollWhenReady("#home")}
+              onClick={() => scrollWhenReady("#services")}
             >
               SERVICES
             </Link>
