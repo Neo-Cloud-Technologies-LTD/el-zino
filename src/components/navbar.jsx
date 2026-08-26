@@ -49,8 +49,7 @@ function Navbar() {
 
   return (
     <div>
-      <header className="navbar" style={{  backdropFilter: "blur(10px)",
-  webkitBackdropFilter: "blur(20px)",}}>
+      <header className="navbar">
         <div className="logo">
           <img src="/Elzino logo copy.png" alt="El-Zino Logo" />
         </div>
