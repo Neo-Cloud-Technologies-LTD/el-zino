@@ -14,12 +14,15 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-header.navbar{
+header.navbar {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(20px);
 }
 
-
+header.mobile-menu {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+}
 
 .mobile-menu {
   display: flex;
@@ -53,9 +56,9 @@ header.navbar{
   cursor: pointer;
 }
 
-  .logo img {
-    height: 50px;
-  }
+.logo img {
+  height: 50px;
+}
 
 nav {
   display: flex;

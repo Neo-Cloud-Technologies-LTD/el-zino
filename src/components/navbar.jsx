@@ -86,7 +86,7 @@ function Navbar() {
       </header>
 
       {menuOpen && (
-        <div className="mobile-menu">
+        <header className="mobile-menu">
           <a href="#home" onClick={handleLinkClick}>
             HOME
           </a>
@@ -102,7 +102,7 @@ function Navbar() {
           <a href="#contact" onClick={handleLinkClick}>
             CONTACT
           </a>
-        </div>
+        </header>
       )}
     </div>
   );
