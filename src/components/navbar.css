@@ -19,17 +19,12 @@ header.navbar {
   -webkit-backdrop-filter: blur(20px);
 }
 
-header.mobile-menu {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
 .mobile-menu {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background: #f8f9fc50;
+  background: #f8f9fc80;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 100%;
