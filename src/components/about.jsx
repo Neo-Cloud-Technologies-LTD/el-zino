@@ -1,12 +1,32 @@
+import { useState, useRef, useEffect } from "react";
 import "./about.css";
-import aboutImage from "../assets/about-image.png";
-import heroVideo from "../assets/hero.mp4"
+import aboutImage from "../assets/about-image.webp";
 
 function AboutSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const aboutRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-content">
-        <div className="about-text">
+        <div className={`about-text ${isVisible? "animate": ""}`} ref={aboutRef}>
           <h1>
             ABOUT EL-
             <br />
@@ -28,11 +48,8 @@ function AboutSection() {
       </div>
 
       <div className="about-metrics">
-        <video className="background-video" autoPlay muted loop playsInline>
-          <source src={heroVideo} type="video/mp4" />
-        </video>
         <div className="overlay"></div>
-        <div className="metric">
+        <div className="metric" id="first">
           <h2>2023</h2>
           <p>
             Year <br /> Established
@@ -46,14 +63,14 @@ function AboutSection() {
           </p>
         </div>
 
-        <div className="metric">
+        <div className="metric" id="third">
           <h2>200</h2>
           <p>
             Contractors <br /> Appointed
           </p>
         </div>
 
-        <div className="metric">
+        <div className="metric" id="fourth">
           <h2>15</h2>
           <p>
             Awards <br /> Won

@@ -4,7 +4,7 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <main className="contact-page">
+    <main className="contact-page" id="contact">
       <section className="contact-shell">
         <header className="contact-header">
           <h1>GET IN TOUCH</h1>
@@ -94,7 +94,7 @@ const Contact = () => {
         </section>
 
         <footer className="contact-footer">
-          <p>© 2025 by EL-Zino Construction. All rights reserved.</p>
+          <p>© 2026 by EL-Zino Construction. All rights reserved.</p>
 
           <div className="socials">
             <a href="#" aria-label="Facebook">f</a>

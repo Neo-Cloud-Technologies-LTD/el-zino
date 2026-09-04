@@ -1,9 +1,9 @@
 import "./clients.css";
-import Tipox from "../assets/tipox.png";
+import Tipox from "../assets/tipox.webp";
 import Excipia from "../assets/excipia.webp";
 import Vide from "../assets/vide.webp";
 import Dehotel from "../assets/dehotel.webp";
-import Umber from "../assets/umber.png";
+import Umber from "../assets/umber.webp";
 
 function Client() {
   return (

@@ -1,16 +1,39 @@
+import { useState, useRef, useEffect } from "react";
 import "./services.css";
+import residential from "../assets/residential.webp";
+import commercial from "../assets/commercial.webp";
+import renovation from "../assets/renovation.webp";
 
 function ServicesSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const servicesRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+    if (servicesRef.current) {
+      observer.observe(servicesRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
-      <section className="services">
+      <section className="services" id="services" >
         <h1>OUR SERVICES</h1>
         <div className="underline"></div>
 
         <div className="service-container">
-          <div className="service-card">
+          <div className={`service-card ${isVisible? "animate": ""}`} ref={servicesRef}>
             <img
-              src="src/assets/residential.png"
+              src={residential}
               alt="Residential Construction"
             />
             <div className="text-container">
@@ -25,8 +48,8 @@ function ServicesSection() {
             </div>
           </div>
 
-          <div className="service-card">
-            <img src="src/assets/commercial.png" alt="Commercial Development" />
+          <div className={`service-card ${isVisible? "animate": ""}`} ref={servicesRef}>
+            <img src={commercial} alt="Commercial Development" />
             <div className="text-container">
               <h3>Commercial Development</h3>
               <p>
@@ -37,9 +60,9 @@ function ServicesSection() {
             </div>
           </div>
 
-          <div className="service-card">
+          <div className={`service-card ${isVisible? "animate": ""}`} ref={servicesRef}>
             <img
-              src="src/assets/renovation.png"
+              src={renovation}
               alt="Renovation and Remodeling"
             />
             <div className="text-container">

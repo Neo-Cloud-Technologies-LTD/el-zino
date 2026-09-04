@@ -1,12 +1,6 @@
 /* Your css code for the about section goes here. */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
 
 .about {
-  background-color: #f8f9fc;
   color: #2b2769;
 }
 
@@ -19,17 +13,26 @@ body {
 
 .about-content {
   display: flex;
+  background-color: #f8f9fc;
 }
 
 .about-text {
   flex: 1;
   max-width: 50%;
-  padding: 20px 20px 40px 200px;
+  padding: 20px 20px 40px 170px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.about-text.animate {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 2s ease;
 }
 
 .about-text h1 {
   font-size: 55px;
-  font-weight: lighter;
+  font-weight: 400;
   margin-bottom: 15px;
   color: #3c3588;
 }
@@ -56,21 +59,10 @@ body {
 .about-metrics {
   display: flex;
   justify-content: center;
-  padding: 30px 150px;
+  padding: 30px 100px;
   width: 100%;
   align-items: center;
   position: relative;
-}
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
 }
 
 .overlay {
@@ -79,7 +71,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2b276966;
+  background: #2b276950;
   z-index: 1;
 }
 
@@ -89,15 +81,40 @@ body {
   flex: 1;
   padding: 20px;
   border-right: 2px solid rgba(255, 255, 255, 0.959);
+  animation: rotation 40s ease infinite;
 }
 
-.metric:last-child {
+@keyframes rotation {
+  0%,
+  25% {
+    transform: translateY(0);
+    
+  }
+  12.5% {
+    transform: translateY(-20px);
+  }
+}
+
+#first {
+  animation-delay: 0s;
+}
+
+#second {
+  animation-delay: 10s;
+}
+
+#third {
+  animation-delay: 20s;
+}
+
+#fourth {
   border-right: none;
+  animation-delay: 30s;
 }
 
 .metric h2 {
   font-size: 60px;
-  font-weight: lighter;
+  font-weight: 400;
   color: #fff;
   margin-top: 8px;
   margin: 5px 0 0;
@@ -105,16 +122,18 @@ body {
 
 .metric p {
   font-size: 22px;
-  color: #aa9cbb;
+  color: #d2ccda;
   margin: 5px 0 0;
 }
 
-@media (max-width: 900px) {
-
+@media (max-width: 768px) {
   .about-text {
-    padding: 32px;
+    padding: 44px;
   }
 
+  .about-text h1 {
+    font-size: 40px;
+  }
   .about-metrics {
     flex-wrap: wrap;
     gap: 30px;
@@ -129,7 +148,7 @@ body {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 480px) {
   .about-content {
     flex-direction: column-reverse;
   }
@@ -140,7 +159,7 @@ body {
 
   .about-text {
     max-width: 100%;
-    padding: 32px;
+    padding: 44px;
   }
 
   .about-img {
@@ -157,5 +176,10 @@ body {
 
   .metric {
     border-right: none;
+  }
+
+  .heading-underline {
+    width: 60px;
+    height: 5px;
   }
 }

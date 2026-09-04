@@ -8,6 +8,44 @@
   justify-content: space-between;
   z-index: 50;
   background: #f8f9fc40;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+header.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fc80;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: calc(100vh - 75px);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  z-index: 49;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #111;
+}
+
+.menu-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .logo img {
@@ -49,9 +87,9 @@ nav a.active::after {
   background: #6a55d9;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .navbar {
-    padding: 20px;
+    padding: 30px 44px;
   }
 
   nav {
@@ -61,14 +99,17 @@ nav a.active::after {
   nav a {
     font-size: 11px;
   }
+
+  .logo img {
+    height: 40px;
+  }
 }
 
 @media (max-width: 650px) {
   .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
     gap: 20px;
+    padding: 20px;
   }
 
   nav {
@@ -78,12 +119,14 @@ nav a.active::after {
   }
 
   .logo img {
-    height: 30px;
+    height: 40px;
   }
 
-  nav a{
+  nav a {
     display: none;
   }
+
+  .menu-icon {
+    display: block;
+  }
 }
-
-

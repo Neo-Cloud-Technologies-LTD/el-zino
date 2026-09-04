@@ -1,18 +1,10 @@
 import "./hero.css";
-import heroVideo from "../assets/hero.mp4"
 
 function HeroSection() {
   return (
     <>
-        <section className="hero">
-          <video className="background-video" autoPlay muted loop playsInline>
-            <source
-              src={heroVideo}
-              type="video/mp4"
-            />
-          </video>
-
-          <div className="overlay"></div>
+        <section className="hero" id="home">
+          <div className="over"></div>
 
           <div className="hero-content">
             <h1>
