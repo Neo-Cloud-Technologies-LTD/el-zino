@@ -5,7 +5,7 @@
     align-items: center;
     background: #ffffff;
     color: #2b2769;
-    padding: clamp(1.5rem, 3vw, 3rem) 1rem 3rem;
+    padding: 64px 110px;
     min-height: 100vh;
 }
 
@@ -76,7 +76,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     background: white;
     width: min(100%, 72rem);
-    box-shadow: inset 0 0 0 1px rgba(60, 53, 136, 0.08);
     padding: 60px;
 }
 
@@ -98,11 +97,11 @@
     .project-imgs {
         grid-template-columns: 1fr;
         width: 100%;
-        padding: 1rem;
+        padding: 0;
     }
 
     .project-page {
-        padding: 1.25rem 0.75rem 2rem;
+        padding: 44px;
     }
 }
 

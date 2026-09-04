@@ -12,7 +12,7 @@
   .client-text {
     text-align: center;
     color: #3c3588;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 400;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
@@ -28,7 +28,7 @@
   }
 
   .cover img {
-    width: 140px;
+    width: 152px;
     height: 140px;
     object-fit: contain;
     filter: grayscale(100%);
@@ -48,7 +48,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
    .client-text {
     font-size: 40px;
   }
@@ -57,5 +57,9 @@
     width: 100px;
     height: 5px;
     margin: 10px auto;
+  }
+
+  #client {
+    padding: 44px;
   }
 }

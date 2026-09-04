@@ -87,9 +87,9 @@ nav a.active::after {
   background: #6a55d9;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .navbar {
-    padding: 20px;
+    padding: 30px 44px;
   }
 
   nav {
@@ -99,12 +99,17 @@ nav a.active::after {
   nav a {
     font-size: 11px;
   }
+
+  .logo img {
+    height: 40px;
+  }
 }
 
 @media (max-width: 650px) {
   .navbar {
     position: fixed;
     gap: 20px;
+    padding: 20px;
   }
 
   nav {
@@ -114,7 +119,7 @@ nav a.active::after {
   }
 
   .logo img {
-    height: 30px;
+    height: 40px;
   }
 
   nav a {

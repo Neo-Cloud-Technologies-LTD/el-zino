@@ -16,7 +16,7 @@
   background: #fff;
   color: var(--text);
   font-family: "Poppins", sans-serif;
-  padding: 56px 200px 0;
+  padding: 56px 170px 0;
 }
 
 .contact-header {
@@ -27,7 +27,7 @@
 .contact-header h1 {
   margin: 0;
   color: var(--primary);
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 400;
   letter-spacing: 4px;
 }
@@ -191,9 +191,9 @@
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .contact-page {
-    padding: 40px 32px 0;
+    padding: 40px 44px 0;
   }
 
   .contact-header h1 {
@@ -224,12 +224,13 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .contact-header h1{
+    font-size: 40px;
+  }
 }
 
-@media (max-width: 420px) {
-  .contact-page {
-    padding-inline: 16px;
-  }
+@media (max-width: 480px) {
 
   .map-wrap {
     height: 190px;
